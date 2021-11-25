@@ -1,0 +1,8 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vinod-r/portfolio.git",
+  "author": "vinod-r <vinod2x93@gmail.com>",
+  "license": "MIT"
+}
