@@ -7,35 +7,76 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  //   font-family: "Raleway", sans-serif;
   cursor: none;
+  font-family: futura-pt, sans-serif;
 }
 
 body {
   background-color: $background-gray;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+// scrollbar styling
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: $background-gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $lighter-black;
+  border-radius: 2px;
+  transition: background-color 1s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $primary-peach;
 }
 
 .App {
-  //   background-color: red;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  overflow: hidden;
   display: grid;
   place-content: center;
 
+  .background-logo {
+    width: 1440px;
+    position: fixed;
+    z-index: -1;
+    fill: none;
+    stroke: $lighter-black;
+    stroke-width: 1px;
+
+    #bg-logo,
+    #bg-logo-overlay {
+      position: fixed;
+    }
+
+    #bg-logo-overlay {
+      fill: $lighter-black;
+
+      opacity: 0.2;
+    }
+  }
+
   .wrapper {
-    max-width: 1440px;
+    max-width: 1366px;
     width: 100vw;
     height: 100vh;
-    margin-top: 4em;
+    padding: 4em;
     display: grid;
-    grid:
-      "logo content" 1fr
-      " nav content" 4fr/
-      1fr 6fr;
+    place-content: center;
 
     .logo {
-      grid-area: logo;
-      position: relative;
+      position: absolute;
+      top: 4.5rem;
+      left: 4.5rem;
       width: max-content;
       height: max-content;
       margin: 48px;

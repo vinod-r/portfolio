@@ -35,7 +35,7 @@ export const Logo = () => {
 
   return (
     <div className="logo" ref={mouseCheckRef}>
-      <div class="vr-logo">
+      <div className="vr-logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.54 26.77">
           <g id="logo" data-name="Layer 1">
             <path d="M20.53.1c-1.27,0-2.67,0-4.18-.1V.67a3.44,3.44,0,0,1,2.09.67,2.39,2.39,0,0,1,.72,1.94,12.71,12.71,0,0,1-.94,4.08L15,16.07l.4,1L20,4.65a9.55,9.55,0,0,1,1.44-2.71A3.93,3.93,0,0,1,23.07.67V0C22.4.07,21.55.1,20.53.1Z" />
@@ -45,7 +45,7 @@ export const Logo = () => {
         </svg>
       </div>
       <div
-        class="vr-logo-fill"
+        className="vr-logo-fill"
         style={{
           clipPath: `circle(18px at ${relativeX.current}px ${relativeY.current}px)`,
         }}

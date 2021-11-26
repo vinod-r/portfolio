@@ -1,0 +1,67 @@
+@import "Fonts.scss";
+@import "Colors.scss";
+
+.App {
+  .wrapper {
+    .splash-frame {
+      background: radial-gradient(
+        90.81% 97.79% at 2.67% 22.17%,
+        $lighter-black 0%,
+        rgba(66, 63, 63, 0) 100%
+      );
+      grid-area: content;
+      place-self: center;
+      border-radius: 100%;
+      border: 2px solid $lighter-black;
+      width: 560px;
+      height: 560px;
+      display: grid;
+      place-content: center;
+      justify-items: center;
+      text-align: center;
+      transition: transform 1s ease-in-out;
+
+      .title,
+      .title span {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 4.5rem;
+        color: $primary-peach;
+      }
+
+      .title span {
+        color: transparent;
+        -webkit-text-stroke: 1px $primary-peach;
+        margin-left: 1rem;
+      }
+
+      .subtitle {
+        font-family: futura-pt;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+        margin-top: 0.5rem;
+        color: $text-white;
+      }
+
+      .enter {
+        font-family: "Playfair Display", serif;
+        font-weight: 900;
+        color: $primary-peach;
+        font-size: 2rem;
+        margin-top: 3rem;
+        text-decoration: none;
+        transition: color 0.5s ease-in-out;
+        width: fit-content;
+
+        &:hover {
+          color: $text-white;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

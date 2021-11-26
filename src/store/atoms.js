@@ -9,3 +9,8 @@ export const logoHoverCheckState = atom({
   key: "logoHoverCheckState",
   default: false,
 });
+
+export const buttonHoverCheckState = atom({
+  key: "buttonHoverCheckState",
+  default: false,
+});

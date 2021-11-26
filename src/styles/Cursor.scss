@@ -9,8 +9,8 @@
   border: 2px solid $primary-peach;
   border-radius: 100%;
   transform: translate(-50%, -50%);
-  -webkit-transition-duration: 100ms;
-  transition-duration: 100ms;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   will-change: width, height, transform, border;
@@ -27,6 +27,26 @@
   background-color: $primary-peach;
   border-radius: 100%;
   transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease-in-out;
   z-index: 999;
   pointer-events: none;
+}
+
+.button-hover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff20;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  will-change: width, height, transform, border;
+  z-index: 999;
+  pointer-events: none;
+  border: $text-white 1px solid;
 }
