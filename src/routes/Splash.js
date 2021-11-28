@@ -29,7 +29,7 @@ export const Splash = () => {
       enterButton.removeEventListener("mouseleave", mouseLeaveHandler);
       enterButton.removeEventListener("click", mouseClickHandler);
     };
-  });
+  }, [setButtonHoverCheck]);
 
   return (
     <div className="splash-frame">

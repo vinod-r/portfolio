@@ -6,7 +6,7 @@
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid $primary-peach;
+  border: 2px solid $primary-color;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   -webkit-transition-duration: 200ms;
@@ -24,7 +24,7 @@
   left: 50%;
   width: 8px;
   height: 8px;
-  background-color: $primary-peach;
+  background-color: $primary-color;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   transition: opacity 0.2s ease-in-out;
@@ -32,7 +32,8 @@
   pointer-events: none;
 }
 
-.button-hover {
+.button-hover,
+.nav-hover {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -49,4 +50,9 @@
   z-index: 999;
   pointer-events: none;
   border: $text-white 1px solid;
+}
+
+.nav-hover {
+  background-color: #16a08520;
+  border: $primary-color 1px solid;
 }

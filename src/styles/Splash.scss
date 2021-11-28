@@ -9,9 +9,10 @@
         $lighter-black 0%,
         rgba(66, 63, 63, 0) 100%
       );
+      background-size: 100%;
       grid-area: content;
       place-self: center;
-      border-radius: 100%;
+      border-radius: 400%;
       border: 2px solid $lighter-black;
       width: 560px;
       height: 560px;
@@ -19,19 +20,24 @@
       place-content: center;
       justify-items: center;
       text-align: center;
-      transition: transform 1s ease-in-out;
+      transition: transform 1s ease-in-out, background-size 1s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+        background-size: 400%;
+      }
 
       .title,
       .title span {
         font-family: "Playfair Display", serif;
-        font-weight: 700;
+        font-weight: 900;
         font-size: 4.5rem;
-        color: $primary-peach;
+        color: $primary-color;
       }
 
       .title span {
         color: transparent;
-        -webkit-text-stroke: 1px $primary-peach;
+        -webkit-text-stroke: 1px $primary-color;
         margin-left: 1rem;
       }
 
@@ -47,7 +53,7 @@
       .enter {
         font-family: "Playfair Display", serif;
         font-weight: 900;
-        color: $primary-peach;
+        color: $primary-color;
         font-size: 2rem;
         margin-top: 3rem;
         text-decoration: none;
@@ -57,10 +63,6 @@
         &:hover {
           color: $text-white;
         }
-      }
-
-      &:hover {
-        transform: scale(1.05);
       }
     }
   }

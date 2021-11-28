@@ -14,3 +14,8 @@ export const buttonHoverCheckState = atom({
   key: "buttonHoverCheckState",
   default: false,
 });
+
+export const navHoverCheckState = atom({
+  key: "navHoverCheckState",
+  default: false,
+});

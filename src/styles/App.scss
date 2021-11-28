@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: $background-gray;
+  background: $background-gray;
   overflow-x: hidden;
   overflow-y: hidden;
   width: 100vw;
@@ -35,7 +35,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: $primary-peach;
+  background-color: $primary-color;
 }
 
 .App {
@@ -93,14 +93,14 @@ body {
           position: absolute;
           top: 0;
           fill: none;
-          stroke: $primary-peach;
+          stroke: $primary-color;
           stroke-width: 0.5px;
         }
       }
 
       .vr-logo-fill {
         #logo {
-          fill: $primary-peach;
+          fill: $primary-color;
           // clip-path: circle(8px at 0px 0px);
         }
       }
