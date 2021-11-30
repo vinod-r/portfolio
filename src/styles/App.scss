@@ -65,6 +65,39 @@ body {
     }
   }
 
+  .logo {
+    position: absolute;
+    top: 4.5rem;
+    left: 4.5rem;
+    width: max-content;
+    height: max-content;
+    margin: 48px;
+    padding: 16px;
+    display: grid;
+    place-items: center;
+
+    .vr-logo,
+    .vr-logo-fill {
+      width: 4em;
+      position: absolute;
+
+      #logo {
+        position: absolute;
+        top: 0;
+        fill: none;
+        stroke: $primary-color;
+        stroke-width: 0.5px;
+      }
+    }
+
+    .vr-logo-fill {
+      #logo {
+        fill: $primary-color;
+        // clip-path: circle(8px at 0px 0px);
+      }
+    }
+  }
+
   .wrapper {
     max-width: 1366px;
     width: 100vw;
@@ -72,38 +105,5 @@ body {
     padding: 4em;
     display: grid;
     place-content: center;
-
-    .logo {
-      position: absolute;
-      top: 4.5rem;
-      left: 4.5rem;
-      width: max-content;
-      height: max-content;
-      margin: 48px;
-      padding: 16px;
-      display: grid;
-      place-items: center;
-
-      .vr-logo,
-      .vr-logo-fill {
-        width: 4em;
-        position: absolute;
-
-        #logo {
-          position: absolute;
-          top: 0;
-          fill: none;
-          stroke: $primary-color;
-          stroke-width: 0.5px;
-        }
-      }
-
-      .vr-logo-fill {
-        #logo {
-          fill: $primary-color;
-          // clip-path: circle(8px at 0px 0px);
-        }
-      }
-    }
   }
 }

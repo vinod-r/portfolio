@@ -1,0 +1,115 @@
+@import "Fonts.scss";
+@import "Colors.scss";
+
+.App {
+  .wrapper {
+    .portfolio-content {
+      max-width: calc(800px + 2.5rem);
+      height: calc(100vh - 250px);
+      display: grid;
+      place-content: center;
+      position: relative;
+
+      .projects-list {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        padding: 2.5rem;
+
+        // display: grid;
+        // place-content: start;
+        // grid-template-rows: 100%;
+
+        .portfolio-piece-content {
+          width: 100%;
+          position: relative;
+          height: 100%;
+          display: grid;
+          place-content: center;
+          transition: top 0.4s ease-in-out;
+
+          .portfolio-title-block {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: max-content;
+            position: relative;
+
+            .portfolio-title {
+              font-family: "Playfair Display";
+              font-weight: 900;
+              font-size: 3rem;
+              color: $primary-color-light;
+              margin: 0 2.5rem 1rem 0;
+              // opacity: 0;
+            }
+
+            .project-number {
+              position: absolute;
+              font-family: futura-pt;
+              font-weight: 700;
+              font-size: 8rem;
+              -webkit-text-stroke: 2px $primary-color;
+              color: transparent;
+              transform: translate(-50%, -50%);
+              top: 40%;
+              left: 0;
+              z-index: -1;
+            }
+
+            .left-arrow {
+              height: 4rem;
+              width: auto;
+              fill: $primary-color;
+              transition: transform 0.4s ease-in-out;
+            }
+            &:hover .left-arrow {
+              transform: translate(10%);
+            }
+          }
+
+          .portfolio-subtitle {
+            font-family: futura-pt;
+            font-weight: 500;
+            font-size: 2rem;
+            color: $text-white;
+            margin-bottom: 2rem;
+            // opacity: 0;
+          }
+
+          .portfolio-description {
+            color: $text-white;
+            font-family: futura-pt;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            // opacity: 0;
+          }
+        }
+      }
+
+      .down-arrow,
+      .up-arrow {
+        width: 4rem;
+        height: 4rem;
+        display: grid;
+        place-content: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        .portfolio-navigation-arrow {
+          width: 4rem;
+          fill: $primary-color;
+          left: 50%;
+        }
+      }
+
+      .up-arrow {
+        opacity: 0.2;
+      }
+      .down-arrow {
+        bottom: 0;
+      }
+    }
+  }
+}

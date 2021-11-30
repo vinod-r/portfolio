@@ -1,0 +1,42 @@
+@import "Fonts.scss";
+@import "Colors.scss";
+
+.App {
+  .wrapper {
+    .landing-content {
+      display: grid;
+      grid-gap: 1.5rem;
+      max-width: 800px;
+
+      .landing-title {
+        display: flex;
+        span {
+          display: block;
+          font-family: "Playfair Display";
+          font-weight: 700;
+          font-size: 3rem;
+          color: $text-white;
+          opacity: 0;
+          padding-right: 0.5rem;
+        }
+
+        .name {
+          color: $primary-color-light;
+          font-family: "Playfair Display";
+          font-weight: 900;
+          font-size: 3rem;
+        }
+      }
+
+      .paragraph-1,
+      .paragraph-2 {
+        font-family: futura-pt;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        opacity: 0;
+        color: $text-white;
+      }
+    }
+  }
+}

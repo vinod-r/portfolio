@@ -2,55 +2,59 @@
 @import "Colors.scss";
 
 .App {
-  .wrapper {
-    nav {
-      position: fixed;
-      left: 4.5rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 8rem;
-      text-align: center;
+  nav {
+    position: fixed;
+    left: 4.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8rem;
+    text-align: center;
 
-      ul {
-        display: grid;
-        grid-auto-flow: rows;
-        grid-gap: 4rem;
-
+    ul {
+      display: grid;
+      grid-auto-flow: rows;
+      grid-gap: 4rem;
+      li {
+        list-style: none;
         .nav-item {
-          list-style: none;
+          font-weight: 400;
+          font-size: 1rem;
+          color: $text-white;
+          text-decoration: none;
+          opacity: 0.5;
+          transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
-          a {
-            font-weight: 400;
-            font-size: 1rem;
-            color: $text-white;
-            text-decoration: none;
-            opacity: 0.5;
-            transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
-
-            &:hover {
-              color: $primary-color;
-              opacity: 1;
-              font-weight: 500;
-            }
+          &:hover {
+            color: $primary-color;
+            opacity: 1;
+            font-weight: 500;
           }
         }
 
-        .active-nav-item a {
+        .active {
           color: $primary-color;
           opacity: 1;
           font-weight: 500;
         }
       }
     }
-    // .nav-dot {
-    //   background-color: $primary-color;
-    //   width: 8px;
-    //   height: 8px;
-    //   border-radius: 100%;
-    //   position: absolute;
-    //   top: 8px;
-    //   left: 12px;
-    //   transition: top 0.2s ease-in-out;
-    // }
+    .background-circle {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(
+        90.81% 97.79% at 2.67% 22.17%,
+        $lighter-black 0%,
+        rgba(66, 63, 63, 0) 100%
+      );
+      background-size: 100%;
+      border-radius: 400%;
+      border: 2px solid $lighter-black;
+      width: 600px;
+      height: 600px;
+      pointer-events: none;
+      z-index: -1;
+    }
   }
 }

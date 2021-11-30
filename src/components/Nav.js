@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useRef, useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 import { navHoverCheckState } from "../store/atoms";
@@ -11,7 +11,7 @@ export const Nav = () => {
   const aboutRef = useRef(null);
   const resumeRef = useRef(null);
   const setNavHoverCheck = useSetRecoilState(navHoverCheckState);
-  const location = useLocation();
+  // const location = useLocation();
 
   useEffect(() => {
     const navList = [
@@ -49,46 +49,43 @@ export const Nav = () => {
 
   return (
     <nav>
+      <div className="background-circle"></div>
       <ul>
-        <li
-          className={
-            location.pathname === "/landing"
-              ? "nav-item active-nav-item"
-              : "nav-item"
-          }
-          ref={homeRef}
-        >
-          <Link to="/landing">Home</Link>
+        <li ref={homeRef}>
+          <NavLink
+            to="/landing"
+            className="nav-item"
+            activeClassName="active-nav-item"
+          >
+            Home
+          </NavLink>
         </li>
-        <li
-          className={
-            location.pathname === "/portfolio"
-              ? "nav-item active-nav-item"
-              : "nav-item"
-          }
-          ref={portfolioRef}
-        >
-          <Link to="/portfolio">Portfolio</Link>
+        <li ref={portfolioRef}>
+          <NavLink
+            to="/portfolio"
+            className="nav-item"
+            activeClassName="active-nav-item"
+          >
+            Portfolio
+          </NavLink>
         </li>
-        <li
-          className={
-            location.pathname === "/about"
-              ? "nav-item active-nav-item"
-              : "nav-item"
-          }
-          ref={aboutRef}
-        >
-          <Link to="/about">About</Link>
+        <li ref={aboutRef}>
+          <NavLink
+            to="/about"
+            className="nav-item"
+            activeClassName="active-nav-item"
+          >
+            About
+          </NavLink>
         </li>
-        <li
-          className={
-            location.pathname === "/resume"
-              ? "nav-item active-nav-item"
-              : "nav-item"
-          }
-          ref={resumeRef}
-        >
-          <Link to="/resume">Resume</Link>
+        <li className="nav-item" ref={resumeRef}>
+          <NavLink
+            to="/resume"
+            className="nav-item"
+            activeClassName="activeNavItem"
+          >
+            Resume
+          </NavLink>
         </li>
       </ul>
     </nav>

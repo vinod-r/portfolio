@@ -1,10 +1,10 @@
 import React from "react";
-import { Nav } from "../components/Nav";
+import { PortfolioContent } from "../components/PortfolioContent";
 
 export const Portfolio = () => {
   return (
     <>
-      <Nav />
+      <PortfolioContent />
     </>
   );
 };
