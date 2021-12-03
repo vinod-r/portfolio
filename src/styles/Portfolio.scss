@@ -4,45 +4,71 @@
 
 .App {
   .wrapper {
-    .portfolio-selection-pips {
+    .scroll-down {
       position: absolute;
       right: 5%;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 5rem;
 
-      .selection-pip {
-        width: 12px;
-        height: 12px;
-        // background-color: $primary-color;
-        border: 1px $primary-color-light solid;
-        margin: 3rem;
-        border-radius: 100%;
+      .scroll-down-text {
+        text-align: center;
+        width: 10ch;
+        color: $text-white;
+        font-weight: 400;
+      }
 
-        transition: background-color 0.4s ease-in-out;
+      .down-arrow {
+        width: 4rem;
+        height: 4rem;
+        display: grid;
+        place-content: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        fill: $primary-color;
+        animation: bob 1s infinite alternate;
+      }
+    }
+    .back-to-top {
+      position: absolute;
+      right: 5%;
+      bottom: 5rem;
+
+      .back-to-top-text {
+        text-align: center;
+        width: 10ch;
+        color: $text-white;
+        font-weight: 400;
+      }
+      .up-arrow {
+        width: 4rem;
+        height: 4rem;
+        display: grid;
+        place-content: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        fill: $primary-color;
+        animation: bob 1s infinite alternate;
+        margin-bottom: 1rem;
       }
     }
     .portfolio-content {
-      max-width: calc(800px + 2.5rem);
-      height: calc(100vh - 250px);
-      display: grid;
-      place-content: center;
+      max-width: calc(600px + 2.5rem);
       position: relative;
 
       .projects-list {
         width: 100%;
         position: relative;
-        height: 100%;
-        overflow: hidden;
-        padding: 2.5rem;
-
-        // display: grid;
-        // place-content: start;
-        // grid-template-rows: 100%;
+        padding: 4rem 0 4rem 0;
+        place-content: center;
+        display: grid;
+        grid-gap: 25rem;
+        margin: 15rem 0 10rem 0;
 
         .portfolio-piece-content {
           width: 100%;
           position: relative;
-          height: 100%;
+          height: 70%;
           display: grid;
           place-content: center;
           transition: top 0.4s ease-in-out;
@@ -54,6 +80,7 @@
               grid-auto-flow: column;
               grid-template-columns: max-content;
               position: relative;
+              z-index: 2;
 
               .portfolio-title {
                 font-family: "Playfair Display";
@@ -61,8 +88,6 @@
                 font-size: 3rem;
                 color: $primary-color-light;
                 margin: 0 2.5rem 1rem 0;
-
-                // opacity: 0;
               }
 
               .project-number {
@@ -90,6 +115,7 @@
             }
           }
           .portfolio-subtitle {
+            z-index: 2;
             font-family: futura-pt;
             font-weight: 500;
             font-size: 2rem;
@@ -98,37 +124,36 @@
           }
 
           .portfolio-description {
+            z-index: 2;
             color: $text-white;
             font-family: futura-pt;
             font-weight: 400;
             font-size: 1rem;
             line-height: 1.4rem;
           }
-        }
-      }
 
-      .down-arrow,
-      .up-arrow {
-        width: 4rem;
-        height: 4rem;
-        display: grid;
-        place-content: center;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        .portfolio-navigation-arrow {
-          width: 4rem;
-          fill: $primary-color;
-          left: 50%;
-        }
-      }
+          .portfolio-image {
+            position: absolute;
+            right: -20%;
+            top: -100%;
+            filter: brightness(0.2);
+            transition: filter 1s ease-in-out;
 
-      .inactive-arrow {
-        opacity: 0.2;
-      }
-      .down-arrow {
-        bottom: 0;
+            &:hover {
+              filter: brightness(0.8);
+            }
+          }
+        }
       }
     }
+  }
+}
+
+@keyframes bob {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, 20px);
   }
 }

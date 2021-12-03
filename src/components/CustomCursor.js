@@ -15,13 +15,11 @@ export const CustomCursor = () => {
   const navHoverCheck = useRecoilValue(navHoverCheckState);
 
   const hoverCheck = () => {
-    let result = false;
     if (logoHoverCheck || buttonHoverCheck || navHoverCheck) {
-      result = true;
+      return true;
     } else {
-      result = false;
+      return false;
     }
-    return result;
   };
 
   const sizeCheck = () => {
@@ -34,15 +32,38 @@ export const CustomCursor = () => {
     return size;
   };
 
+  const colorCheck = (type) => {
+    if (buttonHoverCheck) {
+      if (type === "background") {
+        return "#ffffff20";
+      } else {
+        return "#ffffff";
+      }
+    } else if (navHoverCheck) {
+      if (type === "background") {
+        return "#16a08520";
+      } else {
+        return "#16a085";
+      }
+    } else {
+      if (type === "background") {
+        return "transparent";
+      } else {
+        return "#16a085";
+      }
+    }
+  };
+
   return (
     <>
       <div
         style={{
           left: `${x}px`,
           top: `${y}px`,
-          opacity: hoverCheck() ? "0" : "1",
           width: hoverCheck() ? sizeCheck() : "40px",
           height: hoverCheck() ? sizeCheck() : "40px",
+          backgroundColor: colorCheck("background"),
+          border: `${colorCheck("border")} 2px solid`,
         }}
         className="ring"
       ></div>
@@ -53,28 +74,6 @@ export const CustomCursor = () => {
           top: `${y}px`,
           opacity: hoverCheck() ? "0" : "1",
         }}
-      ></div>
-
-      <div
-        style={{
-          left: `${x}px`,
-          top: `${y}px`,
-          opacity: buttonHoverCheck ? "1" : "0",
-          width: buttonHoverCheck ? "120px" : "8px",
-          height: buttonHoverCheck ? "120px" : "8px",
-        }}
-        className="button-hover"
-      ></div>
-
-      <div
-        style={{
-          left: `${x}px`,
-          top: `${y}px`,
-          opacity: navHoverCheck ? "1" : "0",
-          width: navHoverCheck ? "80px" : "8px",
-          height: navHoverCheck ? "80px" : "8px",
-        }}
-        className="nav-hover"
       ></div>
     </>
   );

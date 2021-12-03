@@ -10,16 +10,6 @@ import { useEffect } from "react";
 
 function App() {
   const location = useLocation();
-
-  // const onEnter = (node) => {
-  //   console.log(node);
-  //   //enter animation
-  // };
-
-  // const onExit = (node) => {
-  //   //enter animation
-  //   console.log(node);
-  // };
   useEffect(() => {
     AOS.init();
   }, []);

@@ -49,34 +49,36 @@ export const Nav = () => {
   };
 
   return (
-    <nav>
+    <>
+      <nav>
+        <ul>
+          <li ref={homeRef}>
+            <NavLink
+              to="/landing"
+              className={(navData) => checkLinkActive(navData)}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li ref={portfolioRef}>
+            <NavLink
+              to="/portfolio"
+              className={(navData) => checkLinkActive(navData)}
+            >
+              Portfolio
+            </NavLink>
+          </li>
+          <li ref={aboutRef}>
+            <NavLink
+              to="/about"
+              className={(navData) => checkLinkActive(navData)}
+            >
+              About
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
       <div className="background-circle"></div>
-      <ul>
-        <li ref={homeRef}>
-          <NavLink
-            to="/landing"
-            className={(navData) => checkLinkActive(navData)}
-          >
-            Home
-          </NavLink>
-        </li>
-        <li ref={portfolioRef}>
-          <NavLink
-            to="/portfolio"
-            className={(navData) => checkLinkActive(navData)}
-          >
-            Portfolio
-          </NavLink>
-        </li>
-        <li ref={aboutRef}>
-          <NavLink
-            to="/about"
-            className={(navData) => checkLinkActive(navData)}
-          >
-            About
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    </>
   );
 };

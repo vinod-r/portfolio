@@ -1,7 +1,54 @@
+@import "Fonts.scss";
+@import "Colors.scss";
+
 .App {
   .wrapper {
     .about-content {
-      // stuff
+      position: relative;
+      width: 800px;
+      .about-title {
+        font-family: "Playfair Display";
+        font-weight: 700;
+        font-size: 4rem;
+        color: $primary-color-light;
+        margin-bottom: 1.5rem;
+      }
+
+      .paragraph-1,
+      .paragraph-2,
+      .paragraph-3 {
+        width: 65ch;
+        font-family: futura-pt;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        color: $text-white;
+        margin-bottom: 1.5rem;
+        &:nth-child(4) {
+          margin-bottom: 5rem;
+        }
+      }
+      .link {
+        font-family: "Playfair Display";
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin-right: 3rem;
+        text-decoration: none;
+        transition: color 0.4s ease-in-out;
+
+        &:hover {
+          color: $text-white;
+        }
+      }
+
+      .photo {
+        position: fixed;
+        height: 90vh;
+        bottom: 0;
+        right: 25%;
+        z-index: -1;
+      }
     }
   }
 }

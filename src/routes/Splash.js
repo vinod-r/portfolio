@@ -7,7 +7,6 @@ import "../styles/Splash.scss";
 
 export const Splash = () => {
   const mouseCheckRef = useRef(null);
-  const splashFrameRef = useRef(null);
   const setButtonHoverCheck = useSetRecoilState(buttonHoverCheckState);
 
   useEffect(() => {
@@ -33,17 +32,8 @@ export const Splash = () => {
     };
   }, [setButtonHoverCheck]);
 
-  // useEffect(() => {
-  //   gsap.from(splashFrameRef.current, {
-  //     duration: 1.2,
-  //     ease: "power4.out",
-  //     y: "1000px",
-  //     opacity: 0,
-  //   });
-  // }, [splashFrameRef]);
-
   return (
-    <div className="splash-frame" ref={splashFrameRef}>
+    <div className="splash-frame" data-aos="fade-up" data-aos-duration="800">
       <h1 className="title">
         Vinod<span>Reddy</span>
       </h1>

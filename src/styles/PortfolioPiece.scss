@@ -3,9 +3,203 @@
 
 .App {
   .wrapper {
-    p {
-      color: red;
-      font-size: 2rem;
+    .project-content {
+      margin: 8rem 0 8rem 0;
+      width: calc(600px + 2.5rem);
+      min-width: 240px;
+      position: relative;
+      .back-button {
+        background-color: transparent;
+        border: none;
+        margin-bottom: 3rem;
+        .back-button-icon {
+          fill: $primary-color;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        &:hover .back-button-icon {
+          transform: translateX(-10%);
+        }
+      }
+      .project-title {
+        font-family: "Playfair Display";
+        font-weight: 700;
+        font-size: 3rem;
+        color: $primary-color-light;
+        margin-bottom: 1.5rem;
+      }
+
+      .project-subtitle {
+        font-family: futura-pt;
+        font-weight: 500;
+        font-size: 2rem;
+        color: $text-white;
+        margin-bottom: 2rem;
+      }
+
+      .project-image {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        margin-bottom: 10rem;
+      }
+
+      .project-details {
+        width: 100%;
+        display: grid;
+        grid:
+          "role timeline skills" 1fr
+          "description description description" 1fr /
+          auto auto auto;
+
+        grid-gap: 2rem;
+
+        color: $text-white;
+        margin-bottom: 10rem;
+
+        .role {
+          grid-area: role;
+          margin-bottom: 1rem;
+          .role-title {
+            font-family: "Playfair Display";
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+
+          .role-info {
+            font-size: 2rem;
+          }
+        }
+        .timeline {
+          grid-area: timeline;
+          margin-bottom: 1rem;
+          .timeline-title {
+            font-family: "Playfair Display";
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+          .timeline-info {
+            font-size: 2rem;
+          }
+        }
+        .skills {
+          grid-area: skills;
+          margin-bottom: 1rem;
+          .skills-title {
+            font-family: "Playfair Display";
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+          .skills-info {
+            font-size: 2rem;
+          }
+        }
+        .project-brief {
+          display: grid;
+          place-content: center;
+          grid-area: description;
+          font-size: 1.25rem;
+          font-weight: 400;
+          font-family: "Playfair Display";
+          line-height: 2;
+        }
+      }
+
+      .project-slab {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20rem;
+        display: grid;
+        grid:
+          "title title" 1fr
+          "slot1 slot2" auto/
+          auto auto;
+        grid-gap: 2rem;
+        place-items: center;
+
+        .project-slab-title {
+          place-self: start;
+          font-size: 2rem;
+          font-weight: 500;
+          color: $primary-color-light;
+          font-family: "Playfair Display";
+        }
+
+        .project-slab-text {
+          color: $text-white;
+          font-size: 1rem;
+          font-weight: 400;
+        }
+
+        .project-insights-text {
+          grid-area: slot1;
+        }
+        .project-insights-image {
+          grid-area: slot2;
+        }
+
+        .project-problem-text {
+          grid-area: slot2;
+        }
+        .project-problem-image {
+          grid-area: slot1;
+        }
+
+        .project-solution-text {
+          grid-area: slot1;
+        }
+        .project-solution-image {
+          grid-area: slot2;
+        }
+      }
+      .scroll-down {
+        position: absolute;
+        top: 2.5%;
+        right: 0;
+
+        .scroll-down-text {
+          text-align: center;
+          width: 10ch;
+          color: $text-white;
+          font-weight: 400;
+        }
+
+        .down-arrow {
+          width: 4rem;
+          height: 4rem;
+          display: grid;
+          place-content: center;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          fill: $primary-color;
+          animation: bob 1s infinite alternate;
+        }
+      }
+      .back-to-top {
+        position: absolute;
+        right: 0;
+        bottom: 2.5rem;
+
+        .back-to-top-text {
+          text-align: center;
+          width: 10ch;
+          color: $text-white;
+          font-weight: 400;
+        }
+        .up-arrow {
+          width: 4rem;
+          height: 4rem;
+          display: grid;
+          place-content: center;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          fill: $primary-color;
+          animation: bob 1s infinite alternate;
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 }

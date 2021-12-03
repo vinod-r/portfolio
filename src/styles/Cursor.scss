@@ -32,28 +32,3 @@
   z-index: 999;
   pointer-events: none;
 }
-
-.button-hover,
-.nav-hover {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  background-color: #ffffff20;
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  -webkit-transition-duration: 200ms;
-  transition-duration: 200ms;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  will-change: width, height, transform, border;
-  z-index: 999;
-  pointer-events: none;
-  border: $text-white 1px solid;
-}
-
-.nav-hover {
-  background-color: #16a08520;
-  border: $primary-color 1px solid;
-}
