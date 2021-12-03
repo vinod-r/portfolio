@@ -1,10 +1,6 @@
 import React from "react";
-import { PortfolioContent } from "../components/PortfolioContent";
+import { Outlet } from "react-router";
 
 export const Portfolio = () => {
-  return (
-    <>
-      <PortfolioContent />
-    </>
-  );
+  return <Outlet />;
 };

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { buttonHoverCheckState } from "../store/atoms";
 import "../styles/Splash.scss";
-// import { gsap } from "gsap";
 
 export const Splash = () => {
   const mouseCheckRef = useRef(null);

@@ -1,23 +1,14 @@
-import { Route, Routes, useLocation } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { BackgroundLogo } from "./components/BackgroundLogo";
 import { CustomCursor } from "./components/CustomCursor";
-import { Landing } from "./routes/Landing";
 import { Logo } from "./components/Logo";
-import { Splash } from "./routes/Splash";
-import { Portfolio } from "./routes/Portfolio";
-import { About } from "./routes/About";
-import { Resume } from "./routes/Resume";
 import "./styles/App.scss";
 import { Nav } from "./components/Nav";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
-  const routes = [
-    { path: "/", name: "splash", Component: <Splash /> },
-    { path: "/landing", name: "landing", Component: <Landing /> },
-    { path: "/portfolio", name: "portfolio", Component: <Portfolio /> },
-    { path: "/about", name: "about", Component: <About /> },
-    { path: "/resume", name: "resume", Component: <Resume /> },
-  ];
   const location = useLocation();
 
   // const onEnter = (node) => {
@@ -29,6 +20,9 @@ function App() {
   //   //enter animation
   //   console.log(node);
   // };
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <div className="App">
@@ -38,11 +32,7 @@ function App() {
       {location.pathname === "/" ? "" : <Nav />}
 
       <div className="wrapper">
-        <Routes>
-          {routes.map(({ path, name, Component }) => (
-            <Route key={name} path={path} element={Component} />
-          ))}
-        </Routes>
+        <Outlet />
       </div>
     </div>
   );

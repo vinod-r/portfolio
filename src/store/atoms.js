@@ -19,3 +19,8 @@ export const navHoverCheckState = atom({
   key: "navHoverCheckState",
   default: false,
 });
+
+export const portfolioSelectionState = atom({
+  key: "portfolioSelectionState",
+  default: 1,
+});

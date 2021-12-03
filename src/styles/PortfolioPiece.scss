@@ -1,0 +1,11 @@
+@import "Fonts.scss";
+@import "Colors.scss";
+
+.App {
+  .wrapper {
+    p {
+      color: red;
+      font-size: 2rem;
+    }
+  }
+}

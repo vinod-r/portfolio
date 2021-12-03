@@ -9,17 +9,10 @@ export const Nav = () => {
   const homeRef = useRef(null);
   const portfolioRef = useRef(null);
   const aboutRef = useRef(null);
-  const resumeRef = useRef(null);
   const setNavHoverCheck = useSetRecoilState(navHoverCheckState);
-  // const location = useLocation();
 
   useEffect(() => {
-    const navList = [
-      homeRef.current,
-      portfolioRef.current,
-      aboutRef.current,
-      resumeRef.current,
-    ];
+    const navList = [homeRef.current, portfolioRef.current, aboutRef.current];
 
     const mouseEnterHandler = () => {
       setNavHoverCheck(true);
@@ -47,6 +40,14 @@ export const Nav = () => {
     };
   }, [setNavHoverCheck]);
 
+  const checkLinkActive = (navData) => {
+    if (navData.isActive) {
+      return "nav-item active-nav-item";
+    } else {
+      return "nav-item";
+    }
+  };
+
   return (
     <nav>
       <div className="background-circle"></div>
@@ -54,8 +55,7 @@ export const Nav = () => {
         <li ref={homeRef}>
           <NavLink
             to="/landing"
-            className="nav-item"
-            activeClassName="active-nav-item"
+            className={(navData) => checkLinkActive(navData)}
           >
             Home
           </NavLink>
@@ -63,8 +63,7 @@ export const Nav = () => {
         <li ref={portfolioRef}>
           <NavLink
             to="/portfolio"
-            className="nav-item"
-            activeClassName="active-nav-item"
+            className={(navData) => checkLinkActive(navData)}
           >
             Portfolio
           </NavLink>
@@ -72,19 +71,9 @@ export const Nav = () => {
         <li ref={aboutRef}>
           <NavLink
             to="/about"
-            className="nav-item"
-            activeClassName="active-nav-item"
+            className={(navData) => checkLinkActive(navData)}
           >
             About
-          </NavLink>
-        </li>
-        <li className="nav-item" ref={resumeRef}>
-          <NavLink
-            to="/resume"
-            className="nav-item"
-            activeClassName="activeNavItem"
-          >
-            Resume
           </NavLink>
         </li>
       </ul>

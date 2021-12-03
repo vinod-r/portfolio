@@ -1,5 +1,6 @@
 import React from "react";
+import "../styles/About.scss";
 
 export const About = () => {
-  return <></>;
+  return <div className="about-content"></div>;
 };

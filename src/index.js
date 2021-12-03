@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import App from "./App";
+import { AppRoutes } from "./routes/AppRoutes";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <RecoilRoot>
-        <App />
+        <AppRoutes />
       </RecoilRoot>
     </BrowserRouter>
   </React.StrictMode>,
