@@ -108,7 +108,7 @@ export const PortfolioPiece = () => {
   const project = projectList[projectName];
 
   return (
-    <div className="project-content" ref={scrollDownRef}>
+    <>
       <div
         className="scroll-down"
         onClick={() => {
@@ -122,84 +122,91 @@ export const PortfolioPiece = () => {
           </g>
         </svg>
       </div>
-      <button
-        ref={backButtonRef}
-        className="back-button"
-        onClick={() => navigate("/portfolio")}
-        data-aos="fade-up"
-        data-aos-delay="50"
-      >
-        <svg
-          className="back-button-icon"
-          width="53"
-          height="24"
-          viewBox="0 0 53 24"
-          fill="none"
+      <div className="project-content" ref={scrollDownRef}>
+        <button
+          ref={backButtonRef}
+          className="back-button"
+          onClick={() => navigate("/portfolio")}
+          data-aos="fade-up"
+          data-aos-delay="50"
         >
-          <path d="M10.4853 22.6066L0.93934 13.0606C0.353555 12.4748 0.353555 11.5251 0.93934 10.9393L10.4853 1.39335C11.0711 0.807564 12.0208 0.807564 12.6066 1.39335C13.1924 1.97914 13.1924 2.92888 12.6066 3.51467L5.62132 10.5L53 10.5L53 13.5L5.62132 13.5L12.6066 20.4852C13.1924 21.071 13.1924 22.0208 12.6066 22.6066C12.0208 23.1923 11.0711 23.1923 10.4853 22.6066Z" />
-        </svg>
-      </button>
+          <p style={{ display: "none" }}>Text to fix WAVE empty button error</p>
+          <svg
+            className="back-button-icon"
+            width="53"
+            height="24"
+            viewBox="0 0 53 24"
+            fill="none"
+          >
+            <path d="M10.4853 22.6066L0.93934 13.0606C0.353555 12.4748 0.353555 11.5251 0.93934 10.9393L10.4853 1.39335C11.0711 0.807564 12.0208 0.807564 12.6066 1.39335C13.1924 1.97914 13.1924 2.92888 12.6066 3.51467L5.62132 10.5L53 10.5L53 13.5L5.62132 13.5L12.6066 20.4852C13.1924 21.071 13.1924 22.0208 12.6066 22.6066C12.0208 23.1923 11.0711 23.1923 10.4853 22.6066Z" />
+          </svg>
+        </button>
 
-      <h1 className="project-title" data-aos="fade-up" data-aos-delay="100">
-        {project.title}
-      </h1>
-      <h1 className="project-subtitle" data-aos="fade-up" data-aos-delay="150">
-        {project.subtitle}
-      </h1>
-      <img
-        src={Plc}
-        alt="key"
-        className="project-image"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      />
-      <div className="project-details" data-aos="fade-up">
-        <div className="role">
-          <h2 className="role-title">Role</h2>
-          <p className="role-info">{project.roleInfo}</p>
-        </div>
-        <div className="timeline">
-          <h2 className="timeline-title">Timeline</h2>
-          <p className="timeline-info">{project.timelineInfo}</p>
-        </div>
-        <div className="skills">
-          <h2 className="skills-title">Skills</h2>
-          <p className="skills-info">{project.skillsInfo}</p>
-        </div>
-        <p className="project-brief">{project.brief}</p>
-      </div>
-      <div className="project-insights project-slab" data-aos="fade-up">
-        <div className="project-slab-title">Insights</div>
-        <p className="project-insights-text  project-slab-text">
-          {project.insights}
-        </p>
+        <h1 className="project-title" data-aos="fade-up" data-aos-delay="100">
+          {project.title}
+        </h1>
+        <h1
+          className="project-subtitle"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          {project.subtitle}
+        </h1>
         <img
           src={Plc}
-          alt=""
-          className="project-insights-image project-slab-image"
+          alt="key"
+          className="project-image"
+          data-aos="fade-up"
+          data-aos-delay="200"
         />
-      </div>
-      <div className="project-problem project-slab" data-aos="fade-up">
-        <div className="project-slab-title">Problem</div>
-        <p className="project-problem-text  project-slab-text">
-          {project.problem}
-        </p>
-        <img
-          src={Plc}
-          alt=""
-          className="project-problem-image project-slab-image"
-        />
-      </div>
-      <div className="project-solution project-slab" data-aos="fade-up">
-        <div className="project-slab-title">Solution</div>
-        <p className="project-solution-text project-slab-text">
-          {project.solution}
-        </p>
-        <img
-          src={Plc}
-          alt=""
-          className="project-solution-image project-slab-image"
-        />
+        <div className="project-details" data-aos="fade-up">
+          <div className="role">
+            <h2 className="role-title">Role</h2>
+            <h3 className="role-info">{project.roleInfo}</h3>
+          </div>
+          <div className="timeline">
+            <h2 className="timeline-title">Timeline</h2>
+            <h3 className="timeline-info">{project.timelineInfo}</h3>
+          </div>
+          <div className="skills">
+            <h2 className="skills-title">Skills</h2>
+            <h3 className="skills-info">{project.skillsInfo}</h3>
+          </div>
+          <p className="project-brief">{project.brief}</p>
+        </div>
+        <div className="project-insights project-slab" data-aos="fade-up">
+          <div className="project-slab-title">Insights</div>
+          <p className="project-insights-text  project-slab-text">
+            {project.insights}
+          </p>
+          <img
+            src={Plc}
+            alt=""
+            className="project-insights-image project-slab-image"
+          />
+        </div>
+        <div className="project-problem project-slab" data-aos="fade-up">
+          <div className="project-slab-title">Problem</div>
+          <p className="project-problem-text  project-slab-text">
+            {project.problem}
+          </p>
+          <img
+            src={Plc}
+            alt=""
+            className="project-problem-image project-slab-image"
+          />
+        </div>
+        <div className="project-solution project-slab" data-aos="fade-up">
+          <div className="project-slab-title">Solution</div>
+          <p className="project-solution-text project-slab-text">
+            {project.solution}
+          </p>
+          <img
+            src={Plc}
+            alt=""
+            className="project-solution-image project-slab-image"
+          />
+        </div>
       </div>
       <div
         className="back-to-top"
@@ -215,6 +222,6 @@ export const PortfolioPiece = () => {
         </svg>
         <h3 className="back-to-top-text">Back to Top</h3>
       </div>
-    </div>
+    </>
   );
 };

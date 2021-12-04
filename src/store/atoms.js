@@ -24,3 +24,8 @@ export const portfolioSelectionState = atom({
   key: "portfolioSelectionState",
   default: 1,
 });
+
+export const windowWidthState = atom({
+  key: "windowWidthState",
+  default: 1920,
+});

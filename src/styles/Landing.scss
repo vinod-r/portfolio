@@ -10,6 +10,10 @@
       max-width: 800px;
       place-content: center;
 
+      @media screen and (max-width: 500px) {
+        width: 80vw;
+      }
+
       .landing-title {
         display: flex;
         span {
@@ -20,6 +24,10 @@
           color: $text-white;
           // opacity: 0;
           padding-right: 0.5rem;
+
+          @media screen and (max-width: 500px) {
+            font-size: 2rem;
+          }
         }
 
         .name {
@@ -27,6 +35,10 @@
           font-family: "Playfair Display";
           font-weight: 900;
           font-size: 3rem;
+
+          @media screen and (max-width: 500px) {
+            font-size: 2rem;
+          }
         }
       }
 

@@ -11,6 +11,10 @@
     text-align: center;
     z-index: 10;
 
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+
     ul {
       display: grid;
       grid-auto-flow: rows;
@@ -58,5 +62,41 @@
     height: 600px;
     pointer-events: none;
     z-index: -1;
+  }
+
+  .nav-mobile {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: 20;
+    ul {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 2rem;
+
+      li {
+        list-style: none;
+        .nav-item {
+          font-weight: 400;
+          font-size: 1rem;
+          color: $text-white;
+          text-decoration: none;
+          opacity: 0.5;
+          transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+          &:hover {
+            color: $primary-color;
+            opacity: 1;
+            font-weight: 500;
+          }
+        }
+
+        .active-nav-item {
+          color: $primary-color;
+          opacity: 1;
+          font-weight: 500;
+        }
+      }
+    }
   }
 }

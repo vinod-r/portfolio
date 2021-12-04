@@ -8,6 +8,10 @@
       width: calc(600px + 2.5rem);
       min-width: 240px;
       position: relative;
+      @media screen and (max-width: 500px) {
+        width: 80vw;
+        margin: 12rem 0 8rem 0;
+      }
       .back-button {
         background-color: transparent;
         border: none;
@@ -27,6 +31,10 @@
         font-size: 3rem;
         color: $primary-color-light;
         margin-bottom: 1.5rem;
+
+        @media screen and (max-width: 500px) {
+          font-size: 2rem;
+        }
       }
 
       .project-subtitle {
@@ -35,6 +43,9 @@
         font-size: 2rem;
         color: $text-white;
         margin-bottom: 2rem;
+        @media screen and (max-width: 500px) {
+          font-size: 1.75rem;
+        }
       }
 
       .project-image {
@@ -56,6 +67,15 @@
 
         color: $text-white;
         margin-bottom: 10rem;
+
+        @media screen and (max-width: 500px) {
+          grid:
+            "role" auto
+            "timeline" auto
+            "skills" auto
+            "description" auto /
+            auto;
+        }
 
         .role {
           grid-area: role;
@@ -117,6 +137,15 @@
         grid-gap: 2rem;
         place-items: center;
 
+        @media screen and (max-width: 500px) {
+          grid:
+            "title" 1fr
+            "slot1" 1fr
+            "slot2" 1fr /
+            100%;
+          margin-bottom: 22rem;
+        }
+
         .project-slab-title {
           place-self: start;
           font-size: 2rem;
@@ -129,6 +158,8 @@
           color: $text-white;
           font-size: 1rem;
           font-weight: 400;
+          @media screen and (max-width: 500px) {
+          }
         }
 
         .project-insights-text {
@@ -157,6 +188,10 @@
         top: 2.5%;
         right: 0;
 
+        @media screen and (max-width: 500px) {
+          top: 0;
+        }
+
         .scroll-down-text {
           text-align: center;
           width: 10ch;
@@ -174,12 +209,20 @@
           transform: translateX(-50%);
           fill: $primary-color;
           animation: bob 1s infinite alternate;
+
+          @media screen and (max-width: 500px) {
+            width: 2rem;
+            height: 2rem;
+          }
         }
       }
       .back-to-top {
         position: absolute;
         right: 0;
         bottom: 2.5rem;
+        @media screen and (max-width: 500px) {
+          bottom: -1.5%;
+        }
 
         .back-to-top-text {
           text-align: center;
@@ -198,6 +241,12 @@
           fill: $primary-color;
           animation: bob 1s infinite alternate;
           margin-bottom: 1rem;
+
+          @media screen and (max-width: 500px) {
+            width: 2rem;
+            height: 2rem;
+            margin-bottom: 1.5rem;
+          }
         }
       }
     }
