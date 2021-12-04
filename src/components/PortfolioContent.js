@@ -5,11 +5,12 @@ import "../styles/Portfolio.scss";
 import { PortfolioListItem } from "./PortfolioListItem";
 
 export const PortfolioContent = () => {
+  //declaring refs and recoil states
   const backToTopRef = useRef(null);
   const scrollDownRef = useRef(null);
-
   const setNavHoverCheck = useSetRecoilState(navHoverCheckState);
 
+  //check if cursor is hovering over buttons to change cursor state
   useEffect(() => {
     const buttonList = [backToTopRef.current, scrollDownRef.current];
     const mouseEnterHandler = () => {

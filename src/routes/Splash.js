@@ -6,9 +6,11 @@ import { buttonHoverCheckState } from "../store/atoms";
 import "../styles/Splash.scss";
 
 export const Splash = () => {
+  //declaring refs and recoil states
   const mouseCheckRef = useRef(null);
   const setButtonHoverCheck = useSetRecoilState(buttonHoverCheckState);
 
+  //checking cursor hover over buttons
   useEffect(() => {
     const enterButton = mouseCheckRef.current;
     const mouseEnterHandler = () => {

@@ -9,11 +9,13 @@ import {
 } from "../store/atoms";
 
 export const CustomCursor = () => {
+  //declaring refs
   const { x, y } = useMousePosition();
   const logoHoverCheck = useRecoilValue(logoHoverCheckState);
   const buttonHoverCheck = useRecoilValue(buttonHoverCheckState);
   const navHoverCheck = useRecoilValue(navHoverCheckState);
 
+  //checking if cursor is hovering over interactive item
   const hoverCheck = () => {
     if (logoHoverCheck || buttonHoverCheck || navHoverCheck) {
       return true;
@@ -22,6 +24,7 @@ export const CustomCursor = () => {
     }
   };
 
+  //checking what the size of the cursor should be based on hovered element
   const sizeCheck = () => {
     let size = "0px";
     if (buttonHoverCheck) {
@@ -32,6 +35,7 @@ export const CustomCursor = () => {
     return size;
   };
 
+  //checking what the color of the cursor should be based on the hovered element
   const colorCheck = (type) => {
     if (buttonHoverCheck) {
       if (type === "background") {

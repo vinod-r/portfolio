@@ -6,11 +6,13 @@ import { navHoverCheckState } from "../store/atoms";
 import "../styles/Nav.scss";
 
 export const Nav = () => {
+  //declaring refs
   const homeRef = useRef(null);
   const portfolioRef = useRef(null);
   const aboutRef = useRef(null);
   const setNavHoverCheck = useSetRecoilState(navHoverCheckState);
 
+  //checking for hover on nav elements to trigger cursor state
   useEffect(() => {
     const navList = [homeRef.current, portfolioRef.current, aboutRef.current];
 
@@ -40,6 +42,7 @@ export const Nav = () => {
     };
   }, [setNavHoverCheck]);
 
+  //check if nav link is active
   const checkLinkActive = (navData) => {
     if (navData.isActive) {
       return "nav-item active-nav-item";

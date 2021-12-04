@@ -1,7 +1,9 @@
 @import "Fonts.scss";
 @import "Colors.scss";
 
+//navigation styling
 .App {
+  //styling the nav
   nav {
     position: fixed;
     left: 4.5rem;
@@ -45,6 +47,8 @@
       }
     }
   }
+
+  //styling background circle
   .background-circle {
     position: fixed;
     top: 50%;
@@ -64,6 +68,7 @@
     z-index: -1;
   }
 
+  //styling nav
   .nav-mobile {
     position: absolute;
     top: 10%;

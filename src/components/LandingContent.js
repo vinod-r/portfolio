@@ -1,6 +1,7 @@
 import React from "react";
 
 export const LandingContent = () => {
+  //html content of the landing page
   return (
     <div className="landing-content">
       <h1 className="landing-title">

@@ -1,6 +1,7 @@
 @import "Fonts.scss";
 @import "Colors.scss";
 
+//custom cursor ring styling
 .ring {
   position: fixed;
   top: 0;
@@ -23,6 +24,7 @@
   }
 }
 
+//custom cursor dot styling
 .dot {
   position: fixed;
   top: 50%;

@@ -9,6 +9,7 @@ import { PortfolioContent } from "../components/PortfolioContent";
 import { PortfolioPiece } from "../components/PortfolioPiece";
 
 export const AppRoutes = () => {
+  //all app routes for the entire page
   return (
     <Routes>
       <Route path="/" element={<App />}>

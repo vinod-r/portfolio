@@ -1,8 +1,10 @@
 @import "Fonts.scss";
 @import "Colors.scss";
 
+//styling the splash page
 .App {
   .wrapper {
+    //styling the splash frame
     .splash-frame {
       background: radial-gradient(
         90.81% 97.79% at 2.67% 22.17%,
@@ -32,6 +34,7 @@
         width: 95vw;
       }
 
+      //styling the title
       .title,
       .title span {
         font-family: "Playfair Display", serif;
@@ -43,12 +46,14 @@
         }
       }
 
+      //styling the title span
       .title span {
         color: transparent;
         -webkit-text-stroke: 1px $primary-color;
         margin-left: 1rem;
       }
 
+      //styling the subtitle
       .subtitle {
         font-family: futura-pt;
         font-style: normal;
@@ -61,6 +66,7 @@
         }
       }
 
+      //styling the enter button
       .enter {
         font-family: "Playfair Display", serif;
         font-weight: 900;

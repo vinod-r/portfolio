@@ -10,9 +10,11 @@ export const PortfolioListItem = ({
   description,
   link,
 }) => {
+  //declaring refs and recoil states
   const arrowRef = useRef(null);
   const setNavHoverCheck = useSetRecoilState(navHoverCheckState);
 
+  //checking for cursor hover over buttons to change state
   useEffect(() => {
     const arrow = arrowRef.current;
 
@@ -37,6 +39,7 @@ export const PortfolioListItem = ({
       arrow.removeEventListener("click", mouseClickHandler);
     };
   }, [setNavHoverCheck]);
+
   return (
     <div className="portfolio-piece-content">
       <NavLink to={link}>

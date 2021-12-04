@@ -1,9 +1,0 @@
-[data-aos="bring-up"] {
-  transform: translateY(60px);
-  opacity: 0;
-  transition-property: transform, opacity;
-  &.aos-animate {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}

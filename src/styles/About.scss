@@ -1,8 +1,10 @@
 @import "Fonts.scss";
 @import "Colors.scss";
 
+//styling for about page
 .App {
   .wrapper {
+    //styling for about block
     .about-content {
       position: relative;
       width: 800px;
@@ -11,6 +13,7 @@
         margin-top: 5rem;
         width: 80vw;
       }
+      //styling for about title
       .about-title {
         font-family: "Playfair Display";
         font-weight: 700;
@@ -23,6 +26,7 @@
         }
       }
 
+      //styling for about paragraphs
       .paragraph-1,
       .paragraph-2,
       .paragraph-3 {
@@ -41,6 +45,8 @@
           margin-bottom: 1rem;
         }
       }
+
+      //styling for about links
       .link {
         font-family: "Playfair Display";
         font-weight: 700;
@@ -59,6 +65,7 @@
         }
       }
 
+      //styling for photo
       .photo {
         position: fixed;
         height: 90vh;

@@ -6,6 +6,7 @@ import useMousePosition from "../hooks/useMousePosition";
 import { logoHoverCheckState } from "../store/atoms";
 
 export const Logo = () => {
+  //declaring refs and recoil variables
   const { x, y } = useMousePosition();
   const logoOverlayRef = useRef(null);
   const mouseCheckRef = useRef(null);
@@ -13,6 +14,7 @@ export const Logo = () => {
   const relativeY = useRef(null);
   const setLogoHoverCheck = useSetRecoilState(logoHoverCheckState);
 
+  //checking for cursor hovering over logo for logo hover effect
   useEffect(() => {
     if (
       document.elementFromPoint(x, y) === mouseCheckRef.current ||

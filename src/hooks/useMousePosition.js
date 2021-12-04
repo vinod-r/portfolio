@@ -3,6 +3,7 @@ import { useRecoilState } from "recoil";
 import { mousePosition } from "../store/atoms";
 
 export default function useMousePosition() {
+  //hook to constantly get mouse cursor location for custom cursor effect
   const [currentMousePosition, setCurrentMousePosition] =
     useRecoilState(mousePosition);
 

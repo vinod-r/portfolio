@@ -6,6 +6,7 @@ import { useSetRecoilState } from "recoil";
 import { navHoverCheckState } from "../store/atoms";
 
 export const PortfolioPiece = () => {
+  //declaring refs, recoil states and parameters of page (to identify which project to display)
   const projectName = useParams().name;
   const navigate = useNavigate();
   const setNavHoverCheck = useSetRecoilState(navHoverCheckState);
@@ -14,6 +15,7 @@ export const PortfolioPiece = () => {
   const backButtonRef = useRef(null);
   const scrollDownRef = useRef(null);
 
+  //setting page scroll value
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -21,6 +23,7 @@ export const PortfolioPiece = () => {
     });
   }, []);
 
+  //checking cursor hover over buttons to change cursor state
   useEffect(() => {
     const buttonList = [
       backToTopRef.current,
@@ -54,6 +57,7 @@ export const PortfolioPiece = () => {
     };
   }, [setNavHoverCheck]);
 
+  //json object with al content for all projects to load into the JSX
   const projectList = {
     headball: {
       title: "Headball",

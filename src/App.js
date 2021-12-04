@@ -12,13 +12,17 @@ import { useRecoilState } from "recoil";
 import { windowWidthState } from "./store/atoms";
 
 function App() {
+  //declaring location and recoil states
   const [windowWidth, setWindowWidth] = useRecoilState(windowWidthState);
   const location = useLocation();
+
+  //initializing Animate on Scroll Library and setting initial window width for responsiveness
   useEffect(() => {
     AOS.init();
     setWindowWidth(window.innerWidth);
   }, [setWindowWidth]);
 
+  //updating window width on resize to check which nav to display
   useEffect(() => {
     function handleResize() {
       setWindowWidth(window.innerWidth);
@@ -33,6 +37,7 @@ function App() {
       <BackgroundLogo />
       <CustomCursor />
       <Logo />
+      {/* checking which nav to display (mobile or web) */}
       {windowWidth > 500 && location.pathname !== "/" ? <Nav /> : ""}
       {windowWidth <= 500 && location.pathname !== "/" ? <NavMobile /> : ""}
 

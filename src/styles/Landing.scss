@@ -1,8 +1,10 @@
 @import "Fonts.scss";
 @import "Colors.scss";
 
+//landing content styling
 .App {
   .wrapper {
+    //landing content block styling
     .landing-content {
       height: 100vh;
       display: grid;
@@ -14,6 +16,7 @@
         width: 80vw;
       }
 
+      //landing title styling
       .landing-title {
         display: flex;
         span {
@@ -22,7 +25,6 @@
           font-weight: 700;
           font-size: 3rem;
           color: $text-white;
-          // opacity: 0;
           padding-right: 0.5rem;
 
           @media screen and (max-width: 500px) {
@@ -30,6 +32,7 @@
           }
         }
 
+        //name styling
         .name {
           color: $primary-color-light;
           font-family: "Playfair Display";
@@ -42,6 +45,7 @@
         }
       }
 
+      //landing paragraphs styling
       .paragraph-1,
       .paragraph-2 {
         font-family: futura-pt;

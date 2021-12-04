@@ -6,11 +6,14 @@ import { useSetRecoilState } from "recoil";
 import { buttonHoverCheckState } from "../store/atoms";
 
 export const About = () => {
+  //declaring recoil states and refs
   const setNavHoverCheck = useSetRecoilState(buttonHoverCheckState);
 
   const resumeRef = useRef(null);
   const linkedinRef = useRef(null);
   const behanceRef = useRef(null);
+
+  //checking for cursor hover over links for contextual cursor effects
   useEffect(() => {
     const linkList = [
       resumeRef.current,

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import "../styles/Nav.scss";
 
 export const NavMobile = () => {
+  //check if nav link is active
   const checkLinkActive = (navData) => {
     if (navData.isActive) {
       return "nav-item active-nav-item";

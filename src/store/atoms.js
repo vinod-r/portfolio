@@ -1,5 +1,6 @@
 import { atom } from "recoil";
 
+//recoil atoms for global state management
 export const mousePosition = atom({
   key: "mousePosition",
   default: { x: 0, y: 0 },

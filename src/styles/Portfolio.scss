@@ -1,9 +1,10 @@
 @import "Fonts.scss";
 @import "Colors.scss";
-@import "Animations.scss";
 
+//styling the protfolio list page
 .App {
   .wrapper {
+    //styling the scroll down button unit
     .scroll-down {
       position: absolute;
       right: 5%;
@@ -38,6 +39,8 @@
         }
       }
     }
+
+    //styling the back to top button unit
     .back-to-top {
       position: absolute;
       right: 5%;
@@ -68,6 +71,8 @@
         }
       }
     }
+
+    //styling portfolio content
     .portfolio-content {
       max-width: calc(600px + 2.5rem);
       position: relative;
@@ -90,6 +95,7 @@
           grid-gap: 20rem;
         }
 
+        //styling individual portfolio pieces
         .portfolio-piece-content {
           width: 100%;
           position: relative;
@@ -100,6 +106,8 @@
 
           a {
             text-decoration: none;
+
+            //styling the portfolio title
             .portfolio-title-block {
               display: grid;
               grid-auto-flow: column;
@@ -121,6 +129,7 @@
                 }
               }
 
+              //styling the project number
               .project-number {
                 position: absolute;
                 font-family: futura-pt;
@@ -152,6 +161,8 @@
               }
             }
           }
+
+          //portfolio subtitle
           .portfolio-subtitle {
             z-index: 2;
             font-family: futura-pt;
@@ -166,6 +177,7 @@
             }
           }
 
+          //styling the portfolio description
           .portfolio-description {
             z-index: 2;
             color: $text-white;
@@ -174,24 +186,13 @@
             font-size: 1rem;
             line-height: 1.4rem;
           }
-
-          .portfolio-image {
-            position: absolute;
-            right: -20%;
-            top: -100%;
-            filter: brightness(0.2);
-            transition: filter 1s ease-in-out;
-
-            &:hover {
-              filter: brightness(0.8);
-            }
-          }
         }
       }
     }
   }
 }
 
+//arrow bob animation
 @keyframes bob {
   0% {
     transform: translate(-50%, 0);
