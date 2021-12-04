@@ -170,7 +170,7 @@ export const PortfolioPiece = () => {
         </h1>
         <img
           src={project.keyImage}
-          alt="key"
+          alt="key graphic"
           className="project-image"
           data-aos="fade-up"
           data-aos-delay="200"
@@ -197,7 +197,7 @@ export const PortfolioPiece = () => {
           </p>
           <img
             src={project.insightsImage}
-            alt=""
+            alt="insights graphic"
             className="project-insights-image project-slab-image"
           />
         </div>
@@ -214,7 +214,7 @@ export const PortfolioPiece = () => {
           </p>
           <img
             src={project.solutionImage}
-            alt=""
+            alt="solution graphic"
             className="project-solution-image project-slab-image"
           />
         </div>

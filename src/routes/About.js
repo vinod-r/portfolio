@@ -4,6 +4,7 @@ import Image from "../icons/me.png";
 import { useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 import { buttonHoverCheckState } from "../store/atoms";
+import Resume from "../images/Vinod Reddy - Resume 2021.pdf";
 
 export const About = () => {
   //declaring recoil states and refs
@@ -70,7 +71,7 @@ export const About = () => {
         soluta veniam?
       </p>
       <a
-        href="/"
+        href={Resume}
         className="link resume"
         data-aos="fade-up"
         data-aos-delay="500"

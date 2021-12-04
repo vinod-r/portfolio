@@ -14,16 +14,15 @@ export const LandingContent = () => {
         </span>
       </h1>
       <p className="paragraph-1" data-aos="fade-up" data-aos-delay="200">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga molestias
-        quisquam culpa reprehenderit atque corrupti qui! Blanditiis laboriosam
-        dolores animi eos, architecto quibusdam deserunt placeat quod a tempore
-        quas ut cumque voluptas ex vel. Expedita totam veniam magni labore
-        commodi?
+        At heart I'm a generalist, with a special love for Visual Design and
+        Illustration and more recently, UX Design. With experience in varied
+        fields like Motion Design and traditional Animation, 3D Sculpting and
+        Modelling to Logo Design and Branding, I bring strong design principles
+        gained from all of these experiences to the table.
       </p>
       <p className="paragraph-2" data-aos="fade-up" data-aos-delay="250">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-        recusandae nam nostrum commodi eveniet necessitatibus illum. Itaque sunt
-        praesentium optio.
+        Any project where I can tap into several of my passions is a dream
+        project.
       </p>
     </div>
   );
