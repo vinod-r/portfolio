@@ -97,7 +97,7 @@
           }
 
           .role-info {
-            font-size: 2rem;
+            font-size: 1.5rem;
           }
         }
 
@@ -111,7 +111,7 @@
             margin-bottom: 1rem;
           }
           .timeline-info {
-            font-size: 2rem;
+            font-size: 1.5rem;
           }
         }
 
@@ -125,7 +125,7 @@
             margin-bottom: 1rem;
           }
           .skills-info {
-            font-size: 2rem;
+            font-size: 1.5rem;
           }
         }
 
@@ -144,11 +144,10 @@
       //styling each project detail section
       .project-slab {
         width: 100%;
-        height: 250px;
-        margin-bottom: 20rem;
+        margin-bottom: 15rem;
         display: grid;
         grid:
-          "title title" 1fr
+          "title title" max-content
           "slot1 slot2" auto/
           auto auto;
         grid-gap: 2rem;
@@ -177,8 +176,6 @@
           color: $text-white;
           font-size: 1rem;
           font-weight: 400;
-          @media screen and (max-width: 500px) {
-          }
         }
 
         .project-insights-text {
@@ -189,7 +186,7 @@
         }
 
         .project-problem-text {
-          grid-area: slot2;
+          grid-area: problem;
         }
         .project-problem-image {
           grid-area: slot1;
@@ -201,6 +198,13 @@
         .project-solution-image {
           grid-area: slot2;
         }
+      }
+
+      .project-problem {
+        grid:
+          "title" max-content
+          "problem" 1fr /
+          auto;
       }
 
       //styling the scroll donw unit
